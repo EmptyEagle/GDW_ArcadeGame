@@ -16,25 +16,25 @@ public class Box : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Button"))
-        {
-            if (other.gameObject.GetComponent<Button>() != null)
-            {
-                Button buttonScript = other.gameObject.GetComponent<Button>();
-                buttonScript.SetButtonState(true);
-            }
-        }
+        //if (other.gameObject.CompareTag("Button"))
+        //{
+        //    if (other.gameObject.GetComponent<Button>() != null)
+        //    {
+        //        Button buttonScript = other.gameObject.GetComponent<Button>();
+        //        buttonScript.SetButtonState(true);
+        //    }
+        //}
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Button"))
-        {
-            if (other.gameObject.GetComponent<Button>() != null)
-            {
-                Button buttonScript = other.gameObject.GetComponent<Button>();
-                buttonScript.SetButtonState(false);
-            }
-        }
+        //if (other.gameObject.CompareTag("Button"))
+        //{
+        //    if (other.gameObject.GetComponent<Button>() != null)
+        //    {
+        //        Button buttonScript = other.gameObject.GetComponent<Button>();
+        //        buttonScript.SetButtonState(false);
+        //    }
+        //}
     }
 }

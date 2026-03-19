@@ -76,14 +76,6 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = true;
         }
-        if (other.gameObject.CompareTag("Button"))
-        {
-            if (other.gameObject.GetComponent<Button>() != null)
-            {
-                Button buttonScript = other.gameObject.GetComponent<Button>();
-                buttonScript.SetButtonState(true);
-            }
-        }
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -91,14 +83,6 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;
-        }
-        if (other.gameObject.CompareTag("Button"))
-        {
-            if (other.gameObject.GetComponent<Button>() != null)
-            {
-                Button buttonScript = other.gameObject.GetComponent<Button>();
-                buttonScript.SetButtonState(false);
-            }
         }
     }
 }

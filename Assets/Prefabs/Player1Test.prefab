@@ -44,10 +44,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4450959571186468466}
-  - component: {fileID: 7511606409852975869}
+  - component: {fileID: 4584968404267717929}
   m_Layer: 0
   m_Name: SideCollisionBottom
-  m_TagString: Untagged
+  m_TagString: ButtonWeightCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -67,8 +67,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 9027294561162014924}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!68 &7511606409852975869
-EdgeCollider2D:
+--- !u!60 &4584968404267717929
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -102,14 +102,21 @@ EdgeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: -0.5, y: -0.5}
-  - {x: 0.5, y: -0.5}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+    m_Paths:
+    - - {x: 0, y: 0}
+      - {x: -0.5, y: -0.5}
+      - {x: 0.5, y: -0.5}
+  m_UseDelaunayMesh: 0
 --- !u!1 &2517398251428586883
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 464248610356388130}
-  - component: {fileID: 4134701377726177461}
+  - component: {fileID: 7787696565560415735}
   m_Layer: 0
   m_Name: SideCollisionRight
   m_TagString: Untagged
@@ -142,8 +149,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 9027294561162014924}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!68 &4134701377726177461
-EdgeCollider2D:
+--- !u!60 &7787696565560415735
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -177,14 +184,21 @@ EdgeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: 0.5, y: 0.5}
-  - {x: 0.5, y: -0.5}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+    m_Paths:
+    - - {x: 0, y: 0}
+      - {x: 0.5, y: 0.5}
+      - {x: 0.5, y: -0.5}
+  m_UseDelaunayMesh: 0
 --- !u!1 &3287357495936183211
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,7 +419,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6393151893602040443}
-  - component: {fileID: 6872350429127818417}
+  - component: {fileID: 3682576760475569641}
   m_Layer: 0
   m_Name: SideCollisionLeft
   m_TagString: Untagged
@@ -428,8 +442,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 9027294561162014924}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!68 &6872350429127818417
-EdgeCollider2D:
+--- !u!60 &3682576760475569641
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -463,14 +477,21 @@ EdgeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: -0.5, y: 0.5}
-  - {x: -0.5, y: -0.5}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+    m_Paths:
+    - - {x: 0, y: 0}
+      - {x: -0.5, y: 0.5}
+      - {x: -0.5, y: -0.5}
+  m_UseDelaunayMesh: 0
 --- !u!1 &6429520053428007766
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,7 +501,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8908006700741493347}
-  - component: {fileID: 211154713324237797}
+  - component: {fileID: 3603480251484190227}
   m_Layer: 0
   m_Name: SideCollisionTop
   m_TagString: Untagged
@@ -503,8 +524,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 9027294561162014924}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!68 &211154713324237797
-EdgeCollider2D:
+--- !u!60 &3603480251484190227
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -538,11 +559,18 @@ EdgeCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
-  - {x: -0.5, y: 0.5}
-  - {x: 0.5, y: 0.5}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+    m_Paths:
+    - - {x: 0, y: 0}
+      - {x: -0.5, y: 0.5}
+      - {x: 0.5, y: 0.5}
+  m_UseDelaunayMesh: 0
