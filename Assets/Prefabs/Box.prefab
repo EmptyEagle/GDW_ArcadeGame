@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 4860105418942544329}
   m_Layer: 0
   m_Name: SideCollisionLeft
-  m_TagString: Untagged
+  m_TagString: ButtonWeightCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 2916487824494782947}
   m_Layer: 0
   m_Name: SideCollisionTop
-  m_TagString: Untagged
+  m_TagString: ButtonWeightCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -498,7 +498,7 @@ GameObject:
   - component: {fileID: 5075684339975819980}
   m_Layer: 0
   m_Name: SideCollisionRight
-  m_TagString: Untagged
+  m_TagString: ButtonWeightCollision
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
