@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody2D>();
         directionalInput = 0;
+        isGrounded = true;
     }
 
     // Update is called once per frame
