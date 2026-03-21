@@ -75,6 +75,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+            Debug.Log("Touched ground");
         }
     }
 
@@ -83,6 +84,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;
+            Debug.Log("Left ground");
         }
     }
 }

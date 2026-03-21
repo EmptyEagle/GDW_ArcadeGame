@@ -9,12 +9,10 @@ public class Gate : MonoBehaviour
     private float gateSpeed = 0.05f;
     
     // Typically all required buttons need to be pressed for the gate to open
-    // CURRENTLY ONLY THE FIRST INDEX BUTTON OPENS THE GATE
     public GameObject[] requiredButtons;
     // Alternatively, all override button(s) combined force the gate to be open
     public GameObject[] overrideButtons;
     // Only one of the required buttons is required to be pressed to open the gate if this is true, otherwise all required buttons need to be pressed
-    // CURRENTLY NOT WORKING
     public bool onlyOneRequired;
     private bool buttonRequirementMet;
     
@@ -37,6 +35,7 @@ public class Gate : MonoBehaviour
             // If the the button requirement isn't met at this point, make sure all the override buttons are pressed
             if (!curButtonCheck.isPressed)
             {
+                Debug.Log("Override button [" + overrideButtons[i].name + "] not pressed.");
                 buttonRequirementMet = false;
                 break;
             }
@@ -47,25 +46,39 @@ public class Gate : MonoBehaviour
         {
             Button curButtonCheck = requiredButtons[i].GetComponent<Button>();
             // There's no need to check for required buttons if the button requirements have been met by the override
-            if (buttonRequirementMet && overrideButtons.Length > 0)
+            if (i == 0 && buttonRequirementMet && overrideButtons.Length > 0)
             {
+                Debug.Log("Override button(s) pressed. Skipping required button check.");
                 break;
             }
             // If the button requirements haven't been met by the override, restart the sequence by setting the requirement to met and looping through the required buttons
-            else
+            else if (i == 0)
             {
                 buttonRequirementMet = true;
+                Debug.Log("Override button(s) not pressed or none are present. Starting required button check.");
             }
-            // If only one button is required to be pressed, break out of the loop with a success
+            // If only one button is required to be pressed, loop through all the buttons to see if one is pressed
             if (onlyOneRequired && curButtonCheck.isPressed)
             {
+                Debug.Log("Required button [" + requiredButtons[i].name + "] pressed. ONLY ONE REQUIRED.");
+                buttonRequirementMet = true;
                 break;
+            }
+            else if (onlyOneRequired)
+            {
+                Debug.Log("Required button [" + requiredButtons[i].name + "] not pressed. ONLY ONE REQUIRED.");
+                buttonRequirementMet = false;
             }
             // Else, if a required button is not pressed, break out of the loop with a failure
             else if (!curButtonCheck.isPressed)
             {
+                Debug.Log("Required button [" + requiredButtons[i].name + "] not pressed.");
                 buttonRequirementMet = false;
                 break;
+            }
+            else if (curButtonCheck.isPressed)
+            {
+                Debug.Log("Required button [" + requiredButtons[i].name + "] pressed.");
             }
         }
         
