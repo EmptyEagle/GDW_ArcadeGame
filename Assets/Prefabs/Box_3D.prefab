@@ -79,8 +79,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0, y: 0}
-      - {x: 0.5, y: 0.5}
-      - {x: 0.5, y: -0.5}
+      - {x: 0.475, y: 0.485}
+      - {x: 0.475, y: -0.485}
   m_UseDelaunayMesh: 0
 --- !u!1 &1418981323047118366
 GameObject:
@@ -196,8 +196,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0, y: 0}
-      - {x: -0.5, y: 0.5}
-      - {x: 0.5, y: 0.5}
+      - {x: -0.475, y: 0.485}
+      - {x: 0.475, y: 0.485}
   m_UseDelaunayMesh: 0
 --- !u!1 &3977068137940008767
 GameObject:
@@ -278,8 +278,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0, y: 0}
-      - {x: -0.5, y: -0.5}
-      - {x: 0.5, y: -0.5}
+      - {x: -0.475, y: -0.485}
+      - {x: 0.475, y: -0.485}
   m_UseDelaunayMesh: 0
 --- !u!1 &5467037364788902948
 GameObject:
@@ -350,8 +350,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.5, y: 0.5}
-  - {x: 0.5, y: 0.5}
+  - {x: -0.475, y: 0.485}
+  - {x: 0.475, y: 0.485}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -435,8 +435,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0, y: 0}
-      - {x: -0.5, y: 0.5}
-      - {x: -0.5, y: -0.5}
+      - {x: -0.475, y: 0.485}
+      - {x: -0.475, y: -0.485}
   m_UseDelaunayMesh: 0
 --- !u!1001 &1948427005538545373
 PrefabInstance:
@@ -492,7 +492,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f638e824e13cd5dd1bbe6683c54342a7, type: 2}
     - target: {fileID: 919132149155446097, guid: 0d789645c4b337fc1b23299c2f90ca66, type: 3}
       propertyPath: m_Name
-      value: Box3D
+      value: Box_3D
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

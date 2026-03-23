@@ -1,26 +1,27 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
 
-public class Gate : MonoBehaviour
+public class Piston : MonoBehaviour
 {
     private float startPosY;
-    private float gateHeight = 3;
+    public float targetHeightY;
     private float currentVerticalPos;
-    private float gateSpeedOpen = 0.05f;
-    private float gateSpeedClose = 0.2f;
+    public GameObject pistonCylinder;
+    private Rigidbody2D pistonCylinderRb;
     
-    // Typically all required buttons need to be pressed for the gate to open
+    // Typically all required buttons need to be pressed for the elevator to activate
     public GameObject[] requiredButtons;
-    // Alternatively, all override button(s) combined force the gate to be open
+    // Alternatively, all override button(s) combined force the elevator to activate
     public GameObject[] overrideButtons;
-    // Only one of the required buttons is required to be pressed to open the gate if this is true, otherwise all required buttons need to be pressed
+    // Only one of the required buttons is required to be pressed for the elevator to activate if this is true, otherwise all required buttons need to be pressed
     public bool onlyOneRequired;
-    private bool buttonRequirementMet;
+    public bool buttonRequirementMet;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        startPosY = transform.position.y;
+        startPosY = pistonCylinder.transform.position.y;
+        pistonCylinderRb = pistonCylinder.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -85,49 +86,21 @@ public class Gate : MonoBehaviour
         
         if (buttonRequirementMet)
         {
-            InitiateOpenGate();
+            InitiateActuatePiston();
         }
         else
         {
-            InitiateCloseGate();
+            InitiateDeactuatePiston();
         }
     }
     
-    private void InitiateOpenGate()
+    private void InitiateActuatePiston()
     {
-        if (startPosY + gateHeight > currentVerticalPos)
-        {
-            StopAllCoroutines();
-            StartCoroutine(OpenGate());
-        }
-    }
-    
-    private void InitiateCloseGate()
-    {
-        if (startPosY < currentVerticalPos)
-        {
-            StopAllCoroutines();
-            StartCoroutine(CloseGate());
-        }
+        pistonCylinderRb.MovePosition(new Vector3(pistonCylinder.transform.position.x, startPosY + targetHeightY, pistonCylinder.transform.position.z));
     }
 
-    IEnumerator OpenGate()
+    private void InitiateDeactuatePiston()
     {
-        while (startPosY + gateHeight > currentVerticalPos)
-        {
-            transform.Translate(Vector3.up * gateSpeedOpen);
-            currentVerticalPos = transform.position.y;
-            yield return new WaitForSeconds(0.02f);
-        }
-    }
-    
-    IEnumerator CloseGate()
-    {
-        while (startPosY < currentVerticalPos)
-        {
-            transform.Translate(Vector3.down * gateSpeedClose);
-            currentVerticalPos = transform.position.y;
-            yield return new WaitForSeconds(0.005f);
-        }
+        pistonCylinderRb.MovePosition(new Vector3(pistonCylinder.transform.position.x, startPosY, pistonCylinder.transform.position.z));
     }
 }

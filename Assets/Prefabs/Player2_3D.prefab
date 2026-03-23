@@ -79,8 +79,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0, y: 0}
-      - {x: -0.5, y: -0.5}
-      - {x: 0.5, y: -0.5}
+      - {x: -0.25, y: -0.485}
+      - {x: 0.25, y: -0.485}
   m_UseDelaunayMesh: 0
 --- !u!1 &4792531901549197068
 GameObject:
@@ -161,8 +161,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0, y: 0}
-      - {x: -0.5, y: 0.5}
-      - {x: 0.5, y: 0.5}
+      - {x: -0.25, y: 0.485}
+      - {x: 0.25, y: 0.485}
   m_UseDelaunayMesh: 0
 --- !u!1 &6091235630707407472
 GameObject:
@@ -243,8 +243,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0, y: 0}
-      - {x: 0.5, y: 0.5}
-      - {x: 0.5, y: -0.5}
+      - {x: 0.25, y: 0.485}
+      - {x: 0.25, y: -0.485}
   m_UseDelaunayMesh: 0
 --- !u!1 &6398658662658933289
 GameObject:
@@ -315,8 +315,8 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -0.5, y: 0.5}
-  - {x: 0.5, y: 0.5}
+  - {x: -0.25, y: 0.485}
+  - {x: 0.25, y: 0.485}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
@@ -400,8 +400,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0, y: 0}
-      - {x: -0.5, y: 0.5}
-      - {x: -0.5, y: -0.5}
+      - {x: -0.25, y: 0.485}
+      - {x: -0.25, y: -0.485}
   m_UseDelaunayMesh: 0
 --- !u!1 &8313458079217764916
 GameObject:
@@ -902,3 +902,4 @@ MonoBehaviour:
   key_MoveRight: 275
   key_Jump: 52
   directionalInput: 0
+  isGrounded: 0

@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D playerRb;
     // This is a value that accumulates when a direction is held and deteriorates when no direction is held
     private float timeBeforeSlowdown;
-    private bool isGrounded;
+    public bool isGrounded;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,19 +28,15 @@ public class PlayerController : MonoBehaviour
         // Get directional input
         if (Input.GetKeyDown(key_MoveLeft))
         {
-            directionalInput--;
+            directionalInput = -1;
         }
-        else if (Input.GetKeyUp(key_MoveLeft))
+        else if (Input.GetKeyDown(key_MoveRight))
         {
-            directionalInput++;
+            directionalInput = 1;
         }
-        if (Input.GetKeyDown(key_MoveRight))
+        else if (Input.GetKeyUp(key_MoveLeft) || Input.GetKeyUp(key_MoveRight))
         {
-            directionalInput++;
-        }
-        else if (Input.GetKeyUp(key_MoveRight))
-        {
-            directionalInput--;
+            directionalInput = 0;
         }
 
         if (Input.GetKeyDown(key_Jump) && isGrounded)
@@ -70,12 +66,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
-            Debug.Log("Touched ground");
+            //Debug.Log("Still on ground");
         }
     }
 
@@ -84,7 +80,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;
-            Debug.Log("Left ground");
+            //Debug.Log("Left ground");
         }
     }
 }

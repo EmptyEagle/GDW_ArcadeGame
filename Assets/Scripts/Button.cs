@@ -26,12 +26,12 @@ public class Button : MonoBehaviour
         if (isPressed)
         {
             //GetComponent<SpriteRenderer>().color = pressedColor;
-            Debug.Log("Button "+gameObject.name+" pressed");
+            //Debug.Log("Button "+gameObject.name+" pressed");
         }
         else
         {
             //GetComponent<SpriteRenderer>().color = unpressedColor;
-            Debug.Log("Button "+gameObject.name+" unpressed");
+            //Debug.Log("Button "+gameObject.name+" unpressed");
         }
     }
     
