@@ -232,6 +232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetHeightY: 0.2
   pistonCylinder: {fileID: 5300736125018591729}
+  pistonFacing: 0
   requiredButtons: []
   overrideButtons: []
   onlyOneRequired: 0
@@ -408,7 +409,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 4
 --- !u!1 &8368137148911376577 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8513424388201257645, guid: 9efce8b167eeefc3a99c5a854f63ba2a, type: 3}

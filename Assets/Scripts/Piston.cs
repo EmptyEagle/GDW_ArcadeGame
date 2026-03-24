@@ -3,11 +3,21 @@ using UnityEngine;
 
 public class Piston : MonoBehaviour
 {
-    private float startPosY;
+    private Vector3 startPos;
     public float targetHeightY;
     private float currentVerticalPos;
     public GameObject pistonCylinder;
     private Rigidbody2D pistonCylinderRb;
+
+    public enum PistonFacing
+    {
+        Up,
+        Down,
+        Left,
+        Right
+    }
+
+    public PistonFacing pistonFacing;
     
     // Typically all required buttons need to be pressed for the elevator to activate
     public GameObject[] requiredButtons;
@@ -20,7 +30,7 @@ public class Piston : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        startPosY = pistonCylinder.transform.position.y;
+        startPos = pistonCylinder.transform.position;
         pistonCylinderRb = pistonCylinder.GetComponent<Rigidbody2D>();
     }
 
@@ -96,11 +106,39 @@ public class Piston : MonoBehaviour
     
     private void InitiateActuatePiston()
     {
-        pistonCylinderRb.MovePosition(new Vector3(pistonCylinder.transform.position.x, startPosY + targetHeightY, pistonCylinder.transform.position.z));
+        switch (pistonFacing)
+        {
+            case PistonFacing.Up:
+                pistonCylinderRb.MovePosition(new Vector3(pistonCylinder.transform.position.x, startPos.y + targetHeightY, pistonCylinder.transform.position.z));
+                break;
+            case PistonFacing.Down:
+                pistonCylinderRb.MovePosition(new Vector3(pistonCylinder.transform.position.x, startPos.y - targetHeightY, pistonCylinder.transform.position.z));
+                break;
+            case PistonFacing.Left:
+                pistonCylinderRb.MovePosition(new Vector3(startPos.x - targetHeightY, pistonCylinder.transform.position.y, pistonCylinder.transform.position.z));
+                break;
+            case PistonFacing.Right:
+                pistonCylinderRb.MovePosition(new Vector3(startPos.x + targetHeightY, pistonCylinder.transform.position.y, pistonCylinder.transform.position.z));
+                break;
+        }
     }
 
     private void InitiateDeactuatePiston()
     {
-        pistonCylinderRb.MovePosition(new Vector3(pistonCylinder.transform.position.x, startPosY, pistonCylinder.transform.position.z));
+        switch (pistonFacing)
+        {
+            case PistonFacing.Up:
+                pistonCylinderRb.MovePosition(new Vector3(pistonCylinder.transform.position.x, startPos.y, pistonCylinder.transform.position.z));
+                break;
+            case PistonFacing.Down:
+                pistonCylinderRb.MovePosition(new Vector3(pistonCylinder.transform.position.x, startPos.y, pistonCylinder.transform.position.z));
+                break;
+            case PistonFacing.Left:
+                pistonCylinderRb.MovePosition(new Vector3(startPos.x, pistonCylinder.transform.position.y, pistonCylinder.transform.position.z));
+                break;
+            case PistonFacing.Right:
+                pistonCylinderRb.MovePosition(new Vector3(startPos.x, pistonCylinder.transform.position.y, pistonCylinder.transform.position.z));
+                break;
+        }
     }
 }
