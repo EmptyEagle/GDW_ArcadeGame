@@ -16,11 +16,20 @@ public class Gate : MonoBehaviour
     // Only one of the required buttons is required to be pressed to open the gate if this is true, otherwise all required buttons need to be pressed
     public bool onlyOneRequired;
     private bool buttonRequirementMet;
+    private bool noButtonsAttached;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         startPosY = transform.position.y;
+        if (requiredButtons.Length < 1 && overrideButtons.Length < 1)
+        {
+            noButtonsAttached = true;
+        }
+        else
+        {
+            noButtonsAttached = false;
+        }
     }
 
     // Update is called once per frame
@@ -83,7 +92,7 @@ public class Gate : MonoBehaviour
             }
         }
         
-        if (buttonRequirementMet)
+        if (buttonRequirementMet && !noButtonsAttached)
         {
             InitiateOpenGate();
         }

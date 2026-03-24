@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public KeyCode key_MoveLeft;
     public KeyCode key_MoveRight;
     public KeyCode key_Jump;
+    private KeyCode key_JumpAlt = KeyCode.Keypad4;
     // directionalInput will be either -1, 0, or 1; this signifies the direction that the player will move
     public int directionalInput;
     private Rigidbody2D playerRb;
@@ -39,9 +40,12 @@ public class PlayerController : MonoBehaviour
             directionalInput = 0;
         }
 
-        if (Input.GetKeyDown(key_Jump) && isGrounded)
+        if (isGrounded)
         {
-            playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
+            if (Input.GetKeyDown(key_Jump) || (Input.GetKeyDown(key_JumpAlt) && key_Jump == KeyCode.Alpha4))
+            {
+                playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
+            }
         }
     }
 
