@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class PlayerController : MonoBehaviour
     // This is a value that accumulates when a direction is held and deteriorates when no direction is held
     private float timeBeforeSlowdown;
     public bool isGrounded;
+    // Player will not be forced still horizontally if under the influence of a piston
+    public bool beingPushed;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -52,7 +55,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         // Move player based on directional input
-        if (directionalInput == 0)
+        if (directionalInput == 0 && !beingPushed)
         {
             if (timeBeforeSlowdown > 0)
                 timeBeforeSlowdown -= 0.5f;
@@ -75,7 +78,6 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
-            //Debug.Log("Still on ground");
         }
     }
 
@@ -84,7 +86,19 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;
-            //Debug.Log("Left ground");
         }
+
+        if (other.gameObject.CompareTag("PistonPushTrigger"))
+        {
+            StopCoroutine(RegainControl());
+            StartCoroutine(RegainControl());
+        }
+    }
+
+    // Timer to regain friction after being pushed by a piston
+    IEnumerator RegainControl()
+    {
+        yield return new WaitForSeconds(1f);
+        beingPushed = false;
     }
 }
