@@ -236,6 +236,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 578d89f8854b1faaea408e6ee43f1433, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gateHeight: 3
+  gateSpeedOpen: 0.05
+  gateSpeedClose: 0.2
   requiredButtons: []
   overrideButtons: []
   onlyOneRequired: 0
@@ -296,6 +299,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6067185528594298527, guid: 467146c8abf4898888ba87a399f16538, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: f9fe9248c121459a8ab3b8747bdbbbfb, type: 2}
     - target: {fileID: 919132149155446097, guid: 467146c8abf4898888ba87a399f16538, type: 3}
       propertyPath: m_Name
       value: GateBoxOnly

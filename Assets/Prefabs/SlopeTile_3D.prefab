@@ -126,7 +126,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: b538946cac00b413a8acfda40128c1b8, type: 2}
+      objectReference: {fileID: 2100000, guid: 8b13992407d4e9c6d99ba800cb91ab02, type: 2}
     - target: {fileID: -3270834789232462163, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
       propertyPath: m_LocalScale.x
       value: 4
@@ -156,11 +156,15 @@ PrefabInstance:
       value: SlopeTile_3D
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -8513424388201257645, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8309461078198536421}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8023823672282004038}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
       insertIndex: -1
@@ -225,4 +229,74 @@ PolygonCollider2D:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
   m_PrefabInstance: {fileID: 6509561743475350097}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7552783292248907181
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6763318776062508474}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6067185528594298527, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1156c835663c25e7286e8362f3987b1a, type: 2}
+    - target: {fileID: 919132149155446097, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
+      propertyPath: m_Name
+      value: TriangleFloor
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
+--- !u!4 &8023823672282004038 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0f553ee7b38ac1823b21140701664a67, type: 3}
+  m_PrefabInstance: {fileID: 7552783292248907181}
   m_PrefabAsset: {fileID: 0}

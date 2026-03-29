@@ -12,8 +12,29 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelTest1.unity
     guid: 7ef304a34332091b0bf4a7885428b3d5
   - enabled: 1
-    path: Assets/Scenes/TutorialTest_LowCollisions.unity
+    path: Assets/Scenes/Scene_Title.unity
+    guid: 58dfc2f9d7a4f6f49b0dbcf40f4fea6a
+  - enabled: 1
+    path: Assets/Scenes/Scene_Credits.unity
+    guid: d3490a9e6eeddb8588d5d91255ba8f28
+  - enabled: 1
+    path: Assets/Scenes/Scene_LevelSelect.unity
+    guid: c860ae732437c054aba14c6430322271
+  - enabled: 1
+    path: Assets/Scenes/Scene_GateTutorial.unity
     guid: 2dfd1f112e519dc48a471ccb295f8725
+  - enabled: 1
+    path: Assets/Scenes/Scene_PistonTutorial.unity
+    guid: 697383c852296a834ba2a2a2538f4c8f
+  - enabled: 1
+    path: Assets/Scenes/Scene_BoxGateTutorial.unity
+    guid: d6c02639144810035ac288aeb842f7dd
+  - enabled: 1
+    path: Assets/Scenes/Scene_ChallengeFling.unity
+    guid: ba1ea46f3a6f86e0792b9ee0ec8b4899
+  - enabled: 1
+    path: Assets/Scenes/Scene_ChallengeSplit.unity
+    guid: 4b0ca37e8a14d9344bf646a8e7947137
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

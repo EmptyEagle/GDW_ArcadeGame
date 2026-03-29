@@ -4,10 +4,10 @@ using System.Collections;
 public class Gate : MonoBehaviour
 {
     private float startPosY;
-    private float gateHeight = 3;
+    public float gateHeight = 3;
     private float currentVerticalPos;
-    private float gateSpeedOpen = 0.05f;
-    private float gateSpeedClose = 0.2f;
+    public float gateSpeedOpen = 0.05f;
+    public float gateSpeedClose = 0.2f;
     
     // Typically all required buttons need to be pressed for the gate to open
     public GameObject[] requiredButtons;

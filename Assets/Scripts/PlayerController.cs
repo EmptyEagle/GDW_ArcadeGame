@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public bool isGrounded;
     // Player will not be forced still horizontally if under the influence of a piston
     public bool beingPushed;
+    public GameObject playerModel;
+    private Goal goalScript;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,6 +26,8 @@ public class PlayerController : MonoBehaviour
         playerRb = GetComponent<Rigidbody2D>();
         directionalInput = 0;
         isGrounded = true;
+        playerModel.transform.localRotation = Quaternion.Euler(0, 90f, 0);
+        goalScript = GameObject.Find("Goal_3D").GetComponent<Goal>();
     }
 
     // Update is called once per frame
@@ -33,10 +37,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(key_MoveLeft))
         {
             directionalInput = -1;
+            playerModel.transform.localRotation = Quaternion.Euler(0, 270f, 0);
         }
         else if (Input.GetKeyDown(key_MoveRight))
         {
             directionalInput = 1;
+            playerModel.transform.localRotation = Quaternion.Euler(0, 90f, 0);
         }
         else if (Input.GetKeyUp(key_MoveLeft) || Input.GetKeyUp(key_MoveRight))
         {
@@ -79,6 +85,11 @@ public class PlayerController : MonoBehaviour
         {
             isGrounded = true;
         }
+        
+        if (other.gameObject.CompareTag("Goal"))
+        {
+            goalScript.PlayerEnteringGoal(gameObject);
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -92,6 +103,11 @@ public class PlayerController : MonoBehaviour
         {
             StopCoroutine(RegainControl());
             StartCoroutine(RegainControl());
+        }
+
+        if (other.gameObject.CompareTag("Goal"))
+        {
+            goalScript.PlayerLeavingGoal(gameObject);
         }
     }
 

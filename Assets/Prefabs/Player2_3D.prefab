@@ -923,6 +923,8 @@ MonoBehaviour:
   key_Jump: 52
   directionalInput: 0
   isGrounded: 0
+  beingPushed: 0
+  playerModel: {fileID: 7461576227031005880}
 --- !u!1001 &7732031687149979625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -984,6 +986,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b9d5ed6e672fc6b683f7d712d401eda, type: 3}
+--- !u!1 &7461576227031005880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2b9d5ed6e672fc6b683f7d712d401eda, type: 3}
+  m_PrefabInstance: {fileID: 7732031687149979625}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7838243189916884994 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2b9d5ed6e672fc6b683f7d712d401eda, type: 3}
