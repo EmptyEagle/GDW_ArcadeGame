@@ -94,11 +94,12 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("PhysicsOnTop"))
         {
             Rigidbody2D otherRb = other.gameObject.GetComponentInParent<Rigidbody2D>();
+            float otherVelocityHorizontal = otherRb.linearVelocity.x;
             if (directionalInput == 0)
             {
-                float otherVelocityHorizontal = otherRb.linearVelocity.x;
                 playerRb.AddForce(otherVelocityHorizontal * Vector3.right * 26f);
             }
+            
         }
     }
 

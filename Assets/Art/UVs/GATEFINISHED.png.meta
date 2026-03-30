@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 5d9df2b845372259ab5f22b6c9f6e216
+guid: 16c60ceba143d31478fbd07cff744983
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5267012731876251804
-    second: NewGate_0
+      213: -6194466588427839241
+    second: GATEFINISHED_0
   - first:
-      213: -3022076000449774744
-    second: NewGate_1
+      213: 1057120366165226177
+    second: GATEFINISHED_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NewGate_0
+      name: GATEFINISHED_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4676e0183dfc7e6b0800000000000000
-      internalID: -5267012731876251804
+      spriteID: 7f89bbf1575d80aa0800000000000000
+      internalID: -6194466588427839241
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NewGate_1
+      name: GATEFINISHED_1
       rect:
         serializedVersion: 2
         x: 843
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 86b35f4a3ed6f06d0800000000000000
-      internalID: -3022076000449774744
+      spriteID: 1c2fb164f55abae00800000000000000
+      internalID: 1057120366165226177
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      NewGate_0: -5267012731876251804
-      NewGate_1: -3022076000449774744
+      GATEFINISHED_0: -6194466588427839241
+      GATEFINISHED_1: 1057120366165226177
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
