@@ -90,6 +90,16 @@ public class PlayerController : MonoBehaviour
         {
             goalScript.PlayerEnteringGoal(gameObject);
         }
+
+        if (other.gameObject.CompareTag("PhysicsOnTop"))
+        {
+            Rigidbody2D otherRb = other.gameObject.GetComponentInParent<Rigidbody2D>();
+            if (directionalInput == 0)
+            {
+                float otherVelocityHorizontal = otherRb.linearVelocity.x;
+                playerRb.AddForce(otherVelocityHorizontal * Vector3.right * 26f);
+            }
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
