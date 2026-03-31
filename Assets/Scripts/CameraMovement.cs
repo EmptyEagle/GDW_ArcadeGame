@@ -4,10 +4,10 @@ public class CameraMovement : MonoBehaviour
 {
     public GameObject playerOne;
     public GameObject playerTwo;
-    private float maxVerticalOffset = 3f;
-    private float minVerticalOffset = 2f;
+    public float maxVerticalOffset = 3f;
+    public float minVerticalOffset = 2f;
     private float verticalOffset;
-    private float maxVerticalDistance = 20f;
+    public float maxVerticalDistance = 20f;
     private float minVerticalDistance = 0f;
 
     // Update is called once per frame

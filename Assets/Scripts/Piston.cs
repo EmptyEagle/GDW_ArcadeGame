@@ -6,8 +6,8 @@ public class Piston : MonoBehaviour
     private float startPosY;
     public float targetHeightY;
     private float currentVerticalPos;
-    private float speedExtending = 0.25f;
-    private float speedRetracting = 0.1f;
+    private float speedExtending = 30f;
+    private float speedRetracting = 5f;
     public GameObject pistonCylinder;
     private Rigidbody2D pistonCylinderRb;
     public GameObject pistonPushObject;
@@ -74,10 +74,10 @@ public class Piston : MonoBehaviour
     IEnumerator ActuatePiston()
     {
         pistonPushObject.SetActive(true);
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.05f);
         while (startPosY + targetHeightY > currentVerticalPos)
         {
-            pistonCylinder.transform.Translate(Vector3.up * speedExtending);
+            pistonCylinder.transform.Translate(Vector3.up * speedExtending * Time.deltaTime);
             currentVerticalPos = pistonCylinder.transform.localPosition.y;
             yield return new WaitForSeconds(0.02f);
         }
@@ -87,9 +87,9 @@ public class Piston : MonoBehaviour
     {
         while (startPosY < currentVerticalPos)
         {
-            pistonCylinder.transform.Translate(Vector3.down * speedRetracting);
+            pistonCylinder.transform.Translate(Vector3.down * speedRetracting * Time.deltaTime);
             currentVerticalPos = pistonCylinder.transform.localPosition.y;
-            yield return new WaitForSeconds(0.005f);
+            yield return new WaitForSeconds(0.02f);
         }
     }
 }

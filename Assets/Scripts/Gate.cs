@@ -6,8 +6,8 @@ public class Gate : MonoBehaviour
     private float startPosY;
     public float gateHeight = 3;
     private float currentVerticalPos;
-    public float gateSpeedOpen = 0.05f;
-    public float gateSpeedClose = 0.2f;
+    public float gateSpeedOpen = 3;
+    public float gateSpeedClose = 8;
     
     // Typically all required buttons need to be pressed for the gate to open
     public GameObject[] requiredButtons;
@@ -66,7 +66,7 @@ public class Gate : MonoBehaviour
     {
         while (startPosY + gateHeight > currentVerticalPos)
         {
-            transform.Translate(Vector3.up * gateSpeedOpen);
+            transform.Translate(Vector3.up * gateSpeedOpen * Time.deltaTime);
             currentVerticalPos = transform.localPosition.y;
             yield return new WaitForSeconds(0.02f);
         }
@@ -76,9 +76,9 @@ public class Gate : MonoBehaviour
     {
         while (startPosY < currentVerticalPos)
         {
-            transform.Translate(Vector3.down * gateSpeedClose);
+            transform.Translate(Vector3.down * gateSpeedClose * Time.deltaTime);
             currentVerticalPos = transform.localPosition.y;
-            yield return new WaitForSeconds(0.005f);
+            yield return new WaitForSeconds(0.02f);
         }
     }
 }

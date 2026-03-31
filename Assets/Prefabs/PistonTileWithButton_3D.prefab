@@ -186,15 +186,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5232890424824663344, guid: e575a5bbf05c40348ae95766cff8ec99, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 5232890424824663344, guid: e575a5bbf05c40348ae95766cff8ec99, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 5232890424824663344, guid: e575a5bbf05c40348ae95766cff8ec99, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 5232890424824663344, guid: e575a5bbf05c40348ae95766cff8ec99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -202,7 +202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5232890424824663344, guid: e575a5bbf05c40348ae95766cff8ec99, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0.57
       objectReference: {fileID: 0}
     - target: {fileID: 5232890424824663344, guid: e575a5bbf05c40348ae95766cff8ec99, type: 3}
       propertyPath: m_LocalPosition.z
@@ -470,7 +470,7 @@ PrefabInstance:
     - target: {fileID: -6067185528594298527, guid: 9efce8b167eeefc3a99c5a854f63ba2a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 9fdfdfd8c2bb577d7babf9246fe482af, type: 2}
+      objectReference: {fileID: 2100000, guid: c055a32b0631a5e6289f85437324fb4b, type: 2}
     - target: {fileID: 592664080621265513, guid: 9efce8b167eeefc3a99c5a854f63ba2a, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.5
@@ -482,7 +482,7 @@ PrefabInstance:
     - target: {fileID: 3566390031902043909, guid: 9efce8b167eeefc3a99c5a854f63ba2a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 043a1ef18dcf945a49ed5d7ca073b05d, type: 2}
+      objectReference: {fileID: 2100000, guid: a6b70fe5fab58c356bb1cfe3ac98e110, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
